@@ -18,7 +18,7 @@ document.getElementById("calculate-grade").addEventListener("click", function ()
         'uniqueIdea', 'clearIdea',
         'liveURL', 'githubURL',
         'uniqueRepoName', 'fileStructure', 'namingConventions', 'commitMessages', 'qualityReadme',
-        'uiDesign', 'designAesthetics',
+        'collab',
     ];
 
     for (const criterion of criteriaList) {
