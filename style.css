@@ -31,6 +31,14 @@ label {
     align-items: center;
 }
 
+#met-criteria {
+    width: 100%;
+    padding: 0.5rem;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    resize: vertical;
+}
 
 #calculate-grade {
     display: inline-block;

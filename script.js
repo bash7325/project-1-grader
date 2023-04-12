@@ -1,6 +1,7 @@
 document.getElementById("calculate-grade").addEventListener("click", function () {
     const form = document.getElementById("grading-form");
     let totalScore = 0;
+    let metCriteria = [];
 
     // Technical Acceptance Criteria
     totalScore += form.serverSideAPIs.checked ? 5 : 0;
@@ -37,6 +38,15 @@ document.getElementById("calculate-grade").addEventListener("click", function ()
     // Collaboration
     totalScore += form.noDisparities.checked ? 10 : 0;
 
+
+    if (form.serverSideAPIs.checked) {
+        totalScore += 5;
+        metCriteria.push("Uses at least two server-side APIs");
+    }
+
+    const metCriteriaTextarea = document.getElementById("met-criteria");
+    metCriteriaTextarea.value = metCriteria.join("\n");
+    
     // Calculate the percentage score
     const percentageScore = (totalScore / 100) * 100;
 
