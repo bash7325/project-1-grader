@@ -1,0 +1,58 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+#calculate-grade {
+    display: inline-block;
+    background-color: #1a8dff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#calculate-grade:hover {
+    background-color: #0f7ae5;
+}
+
+#grade-result {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}

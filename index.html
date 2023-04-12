@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Grading App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Project 1 Grading App</h1>
+    </header>
+    <main class="container">
+        <form id="grading-form">
+            <h2>Technical Acceptance Criteria</h2>
+            <label><input type="checkbox" name="serverSideAPIs"> Uses at least two server-side APIs</label><br>
+            <label><input type="checkbox" name="clientSideStorage"> Uses client-side storage for persistent data</label><br>
+            <label><input type="checkbox" name="noJSAlerts"> Doesn't use JS alerts, prompts, or confirms</label><br>
+            <label><input type="checkbox" name="nonBootstrapCSS"> Uses a non-Bootstrap CSS framework</label><br>
+            <label><input type="checkbox" name="interactiveApp"> Application is interactive</label><br>
+
+            <h2>Concept</h2>
+            <label><input type="checkbox" name="uniqueIdea"> Unique and novel idea</label><br>
+            <label><input type="checkbox" name="clearIdea"> Clear and concise project idea articulation</label><br>
+
+            <h2>Deployment</h2>
+            <label><input type="checkbox" name="liveURL"> Deployed at live URL with no errors</label><br>
+            <label><input type="checkbox" name="githubURL"> GitHub URL submitted</label><br>
+
+            <h2>Repository Quality</h2>
+            <label><input type="checkbox" name="uniqueRepoName"> Unique repository name</label><br>
+            <label><input type="checkbox" name="fileStructure"> Best practices for file structure and naming conventions</label><br>
+            <label><input type="checkbox" name="namingConventions"> Best practices for class/id naming conventions, indentation, quality comments, etc.</label><br>
+            <label><input type="checkbox" name="commitMessages"> Multiple descriptive commit messages</label><br>
+            <label><input type="checkbox" name="qualityReadme"> Quality README file with description, screenshot, and link to deployed application</label><br>
+
+            <h2>Application Quality</h2>
+            <label><input type="checkbox" name="intuitiveUX"> Intuitive and easy-to-navigate user experience</label><br>
+            <label><input type="checkbox" name="polishedUI"> Clean and polished user interface style</label><br>
+            <label><input type="checkbox" name="responsiveApp"> Responsive application</label><br>
+
+            <h2>Presentation</h2>
+            <label><input type="checkbox" name="slideDeck"> Presentation using a slide deck</label><br>
+            <label><input type="checkbox" name="groupMembersSpeak"> Every group member speaks</label><br>
+            <label><input type="checkbox" name="followsTemplate"> Presentation follows Project Presentation Template</label><br>
+
+            <h2>Collaboration</h2>
+            <label><input type="checkbox" name="noDisparities"> No major disparities in GitHub contributions between group members</label><br>
+       
+        </form>
+        <button id="calculate-grade" type="button">Calculate Grade</button>
+        <div id="grade-result">
+            <!-- Display the grading result here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
