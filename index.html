@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,48 +9,180 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <header>
         <h1>Project 1 Grading App</h1>
     </header>
     <main class="container">
         <form id="grading-form">
-            <h2>Technical Acceptance Criteria</h2>
-            <label><input type="checkbox" name="serverSideAPIs"> Uses at least two server-side APIs</label><br>
-            <label><input type="checkbox" name="clientSideStorage"> Uses client-side storage for persistent data</label><br>
-            <label><input type="checkbox" name="noJSAlerts"> Doesn't use JS alerts, prompts, or confirms</label><br>
-            <label><input type="checkbox" name="nonBootstrapCSS"> Uses a non-Bootstrap CSS framework</label><br>
-            <label><input type="checkbox" name="interactiveApp"> Application is interactive</label><br>
-
-            <h2>Concept</h2>
-            <label><input type="checkbox" name="uniqueIdea"> Unique and novel idea</label><br>
-            <label><input type="checkbox" name="clearIdea"> Clear and concise project idea articulation</label><br>
-
-            <h2>Deployment</h2>
-            <label><input type="checkbox" name="liveURL"> Deployed at live URL with no errors</label><br>
-            <label><input type="checkbox" name="githubURL"> GitHub URL submitted</label><br>
-
-            <h2>Repository Quality</h2>
-            <label><input type="checkbox" name="uniqueRepoName"> Unique repository name</label><br>
-            <label><input type="checkbox" name="fileStructure"> Best practices for file structure and naming conventions</label><br>
-            <label><input type="checkbox" name="namingConventions"> Best practices for class/id naming conventions, indentation, quality comments, etc.</label><br>
-            <label><input type="checkbox" name="commitMessages"> Multiple descriptive commit messages</label><br>
-            <label><input type="checkbox" name="qualityReadme"> Quality README file with description, screenshot, and link to deployed application</label><br>
-
-            <h2>Application Quality</h2>
-            <label><input type="checkbox" name="intuitiveUX"> Intuitive and easy-to-navigate user experience</label><br>
-            <label><input type="checkbox" name="polishedUI"> Clean and polished user interface style</label><br>
-            <label><input type="checkbox" name="responsiveApp"> Responsive application</label><br>
-
-            <h2>Presentation</h2>
-            <label><input type="checkbox" name="slideDeck"> Presentation using a slide deck</label><br>
-            <label><input type="checkbox" name="groupMembersSpeak"> Every group member speaks</label><br>
-            <label><input type="checkbox" name="followsTemplate"> Presentation follows Project Presentation Template</label><br>
-
-            <h2>Collaboration</h2>
-            <label><input type="checkbox" name="noDisparities"> No major disparities in GitHub contributions between group members</label><br>
-       
+            <h2>Technical Acceptance Criteria (25 points)</h2>
+            <label>
+                Uses at least two server-side APIs (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="serverSideAPIs" value="0" checked>0</label>
+                    <label><input type="radio" name="serverSideAPIs" value="1">1</label>
+                    <label><input type="radio" name="serverSideAPIs" value="2">2</label>
+                    <label><input type="radio" name="serverSideAPIs" value="3">3</label>
+                    <label><input type="radio" name="serverSideAPIs" value="4">4</label>
+                    <label><input type="radio" name="serverSideAPIs" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Uses client-side storage for persistent data (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="clientSideStorage" value="0" checked>0</label>
+                    <label><input type="radio" name="clientSideStorage" value="1">1</label>
+                    <label><input type="radio" name="clientSideStorage" value="2">2</label>
+                    <label><input type="radio" name="clientSideStorage" value="3">3</label>
+                    <label><input type="radio" name="clientSideStorage" value="4">4</label>
+                    <label><input type="radio" name="clientSideStorage" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Doesn't use JS alerts, prompts, or confirms (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="noJSAlerts" value="0" checked>0</label>
+                    <label><input type="radio" name="noJSAlerts" value="1">1</label>
+                    <label><input type="radio" name="noJSAlerts" value="2">2</label>
+                    <label><input type="radio" name="noJSAlerts" value="3">3</label>
+                    <label><input type="radio" name="noJSAlerts" value="4">4</label>
+                    <label><input type="radio" name="noJSAlerts" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Uses a non-Bootstrap CSS framework (0-5 points):
+                <div class="radio-group">
+                        <label><input type="radio" name="nonBootstrapCSS" value="0" checked>0</label>
+                        <label><input type="radio" name="nonBootstrapCSS" value="1">1</label>
+                        <label><input type="radio" name="nonBootstrapCSS" value="2">2</label>
+                        <label><input type="radio" name="nonBootstrapCSS" value="3">3</label>
+                        <label><input type="radio" name="nonBootstrapCSS" value="4">4</label>
+                        <label><input type="radio" name="nonBootstrapCSS" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Application is interactive (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="interactiveApp" value="0" checked>0</label>
+                    <label><input type="radio" name="interactiveApp" value="1">1</label>
+                    <label><input type="radio" name="interactiveApp" value="2">2</label>
+                    <label><input type="radio" name="interactiveApp" value="3">3</label>
+                    <label><input type="radio" name="interactiveApp" value="4">4</label>
+                    <label><input type="radio" name="interactiveApp" value="5">5</label>
+                </div>
+            </label>
+            <h2>Concept (10 points)</h2>
+            <label>
+                Unique and novel idea (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="uniqueIdea" value="0" checked>0</label>
+                    <label><input type="radio" name="uniqueIdea" value="1">1</label>
+                    <label><input type="radio" name="uniqueIdea" value="2">2</label>
+                    <label><input type="radio" name="uniqueIdea" value="3">3</label>
+                    <label><input type="radio" name="uniqueIdea" value="4">4</label>
+                    <label><input type="radio" name="uniqueIdea" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Clear and concise project idea articulation (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="clearIdea" value="0" checked>0</label>
+                    <label><input type="radio" name="clearIdea" value="1">1</label>
+                    <label><input type="radio" name="clearIdea" value="2">2</label>
+                    <label><input type="radio" name="clearIdea" value="3">3</label>
+                    <label><input type="radio" name="clearIdea" value="4">4</label>
+                    <label><input type="radio" name="clearIdea" value="5">5</label>
+                </div>
+            </label>
+            <h2>Deployment (20 points)</h2>
+            <label>
+                Deployed at live URL with no errors (0-10 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="liveURL" value="0">0</label>
+                    <label><input type="radio" name="liveURL" value="2">2</label>
+                    <label><input type="radio" name="liveURL" value="4">4</label>
+                    <label><input type="radio" name="liveURL" value="6">6</label>
+                    <label><input type="radio" name="liveURL" value="8">8</label>
+                    <label><input type="radio" name="liveURL" value="10">10</label>
+                </div>
+            </label>
+            <label>
+                GitHub URL submitted (0-10 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="githubURL" value="0" checked>0</label>
+                    <label><input type="radio" name="githubURL" value="2">2</label>
+                    <label><input type="radio" name="githubURL" value="4">4</label>
+                    <label><input type="radio" name="githubURL" value="6">6</label>
+                    <label><input type="radio" name="githubURL" value="8">8</label>
+                    <label><input type="radio" name="githubURL" value="10">10</label>
+                </div>
+            </label>
+            <h2>Repository Quality (10 points)</h2>
+            <label>
+                Unique repository name (0-2 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="uniqueRepoName" value="0" checked>0</label>
+                    <label><input type="radio" name="uniqueRepoName" value="1">1</label>
+                    <label><input type="radio" name="uniqueRepoName" value="2">2</label>
+                </div>
+            </label>
+            <label>
+                Best practices for file structure and naming conventions (0-2 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="fileStructure" value="0" checked>0</label>
+                    <label><input type="radio" name="fileStructure" value="1">1</label>
+                    <label><input type="radio" name="fileStructure" value="2">2</label>
+                </div>
+            </label>
+            <label>
+                Best practices for class/id naming conventions, indentation, quality comments, etc. (0-2 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="namingConventions" value="0" checked>0</label>
+                    <label><input type="radio" name="namingConventions" value="1">1</label>
+                    <label><input type="radio" name="namingConventions" value="2">2</label>
+                </div>
+            </label>
+            <label>
+                Multiple descriptive commit messages (0-2 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="commitMessages" value="0" checked>0</label>
+                    <label><input type="radio" name="commitMessages" value="1">1</label>
+                    <label><input type="radio" name="commitMessages" value="2">2</label>
+                </div>
+            </label>
+            <label>
+                Quality README file with description, screenshot, and link to deployed application (0-2 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="qualityReadme" value="0" checked>0</label>
+                    <label><input type="radio" name="qualityReadme" value="1">1</label>
+                    <label><input type="radio" name="qualityReadme" value="2">2</label>
+                </div>
+            </label>
+            <h2>Visual Design (10 points)</h2>
+            <label>
+                Consistency of user interface design (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="uiDesign" value="0" checked>0</label>
+                    <label><input type="radio" name="uiDesign" value="1">1</label>
+                    <label><input type="radio" name="uiDesign" value="2">2</label>
+                    <label><input type="radio" name="uiDesign" value="3">3</label>
+                    <label><input type="radio" name="uiDesign" value="4">4</label>
+                    <label><input type="radio" name="uiDesign" value="5">5</label>
+                </div>
+            </label>
+            <label>
+                Aesthetically pleasing design (0-5 points):
+                <div class="radio-group">
+                    <label><input type="radio" name="designAesthetics" value="0" checked>0</label>
+                    <label><input type="radio" name="designAesthetics" value="1">1</label>
+                    <label><input type="radio" name="designAesthetics" value="2">2</label>
+                    <label><input type="radio" name="designAesthetics" value="3">3</label>
+                    <label><input type="radio" name="designAesthetics" value="4">4</label>
+                    <label><input type="radio" name="designAesthetics" value="5">5</label>
+                </div>
+            </label>
         </form>
         <button id="calculate-grade" type="button">Calculate Grade</button>
         <div id="grade-result">
@@ -60,4 +193,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
