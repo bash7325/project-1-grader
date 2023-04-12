@@ -3,50 +3,42 @@ document.getElementById("calculate-grade").addEventListener("click", function ()
     let totalScore = 0;
     let metCriteria = [];
 
-    // Technical Acceptance Criteria
-    totalScore += form.serverSideAPIs.checked ? 5 : 0;
-    totalScore += form.clientSideStorage.checked ? 5 : 0;
-    totalScore += form.noJSAlerts.checked ? 5 : 0;
-    totalScore += form.nonBootstrapCSS.checked ? 5 : 0;
-    totalScore += form.interactiveApp.checked ? 5 : 0;
+    const criteria = [
+        { id: "serverSideAPIs", points: 5, description: "Uses at least two server-side APIs" },
+        { id: "clientSideStorage", points: 5, description: "Uses client-side storage to store persistent data" },
+        { id: "noJSAlerts", points: 5, description: "Does not use JS alerts, confirms, or prompts (use modals)" },
+        { id: "nonBootstrapCSS", points: 5, description: "Uses a CSS framework other than Bootstrap" },
+        { id: "interactiveApp", points: 5, description: "Application user experience is interactive (accepts and responds to user input)" },
+        { id: "uniqueIdea", points: 5, description: "Application has a unique idea" },
+        { id: "clearIdea", points: 5, description: "Application idea is clearly and concisely written" },
+        { id: "liveURL", points: 10, description: "Application deployed at live URL" },
+        { id: "githubURL", points: 10, description: "Application GitHub URL submitted" },
+        { id: "uniqueRepoName", points: 2, description: "GitHub repository has a unique name" },
+        { id: "fileStructure", points: 2, description: "GitHub repository follows best practices for file structure and naming conventions" },
+        { id: "namingConventions", points: 2, description: "Application file names follow consistent naming conventions" },
+        { id: "commitMessages", points: 2, description: "GitHub repository contains multiple descriptive commit messages" },
+        { id: "qualityReadme", points: 2, description: "GitHub repository contains quality README file with description, screenshot, and link to deployed application" },
+        { id: "intuitiveUX", points: 5, description: "Application user experience is intuitive and easy to navigate" },
+        { id: "polishedUI", points: 5, description: "Application user interface style is clean and polished" },
+        { id: "responsiveApp", points: 5, description: "Application is responsive" },
+        { id: "slideDeck", points: 3, description: "Presentation includes a high-quality, professional slide deck" },
+        { id: "groupMembersSpeak", points: 4, description: "Group members take turns speaking during presentation" },
+        { id: "followsTemplate", points: 3, description: "Presentation follows the template" },
+        { id: "noDisparities", points: 10, description: "No large discrepancies in commits/contributions between group members" },
+    ];
+    
 
-    // Concept
-    totalScore += form.uniqueIdea.checked ? 5 : 0;
-    totalScore += form.clearIdea.checked ? 5 : 0;
+    criteria.forEach(criterion => {
+        if (form[criterion.id].checked) {
+            totalScore += criterion.points;
+            metCriteria.push(criterion.description);
+        }
+    });
 
-    // Deployment
-    totalScore += form.liveURL.checked ? 10 : 0;
-    totalScore += form.githubURL.checked ? 10 : 0;
-
-    // Repository Quality
-    totalScore += form.uniqueRepoName.checked ? 2 : 0;
-    totalScore += form.fileStructure.checked ? 2 : 0;
-    totalScore += form.namingConventions.checked ? 2 : 0;
-    totalScore += form.commitMessages.checked ? 2 : 0;
-    totalScore += form.qualityReadme.checked ? 2 : 0;
-
-    // Application Quality
-    totalScore += form.intuitiveUX.checked ? 5 : 0;
-    totalScore += form.polishedUI.checked ? 5 : 0;
-    totalScore += form.responsiveApp.checked ? 5 : 0;
-
-    // Presentation
-    totalScore += form.slideDeck.checked ? 3 : 0;
-    totalScore += form.groupMembersSpeak.checked ? 4 : 0;
-    totalScore += form.followsTemplate.checked ? 3 : 0;
-
-    // Collaboration
-    totalScore += form.noDisparities.checked ? 10 : 0;
-
-
-    if (form.serverSideAPIs.checked) {
-        totalScore += 5;
-        metCriteria.push("Uses at least two server-side APIs");
-    }
 
     const metCriteriaTextarea = document.getElementById("met-criteria");
     metCriteriaTextarea.value = metCriteria.join("\n");
-    
+
     // Calculate the percentage score
     const percentageScore = (totalScore / 100) * 100;
 
